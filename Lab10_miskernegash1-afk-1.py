@@ -7,5 +7,17 @@ Purpose: This program allows the user to select one of four text files,
 Starter Code: No starter code used.
 Date: October 3, 2026
 """
-from pathline import Pathline
+from pathlib import Path
 import string
+
+
+class WordAnalyzer:
+
+    def __init__(self, filepath):
+        self.__filepath = Path(filepath)
+        self.__frequencies = {}
+
+
+
+
+    
