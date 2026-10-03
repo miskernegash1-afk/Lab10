@@ -16,6 +16,8 @@ class WordAnalyzer:
     def __init__(self, filepath):
         self.__filepath = Path(filepath)
         self.__frequencies = {}
+    def process_file(self): 
+        
 
 
 
