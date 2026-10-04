@@ -51,5 +51,13 @@ class WordAnalyzer:
             print(f"\nError: The file '{self.__filepath}' was not found.")
             return False
 
+def print_report(self):
 
+        # Get dictionary keys and sort alphabetically
+        words = sorted(self.__frequencies.keys())
+
+        print("\n--- Word Count Report ---")
+
+        for word in words:
+            print(f"{word:<20} :: {self.__frequencies[word]}")
     
