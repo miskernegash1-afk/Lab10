@@ -35,8 +35,7 @@ class WordAnalyzer:
 
                     # Remove punctuation
                     line = line.translate(translator)
-
-                    # Split line into words
+                 # Split line into words
                     words = line.split()
 
                     # Count each word
