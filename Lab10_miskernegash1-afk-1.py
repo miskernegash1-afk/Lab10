@@ -7,15 +7,7 @@ Purpose: This program allows the user to select one of four text files,
 Starter Code: No starter code used.
 Date: October 3, 2026
 """
-"""
-Program Name: Word Count
-Author: Misker Negash
-Purpose: This program allows the user to select one of four text files,
-         analyzes the selected file, counts the frequency of each word,
-         and prints the results alphabetically.
-Starter Code: No starter code used.
-Date: October 3, 2026
-"""
+
 
 from pathlib import Path
 import string
@@ -102,3 +94,27 @@ def main():
         print("5. Exit")
 
         choice = input("\nEnter your choice (1-5): ")
+
+        if choice == "5":
+            print("\nGoodbye!")
+            break
+
+        elif choice in files:
+
+            filepath = files[choice]
+
+            print(f"\nProcessing '{filepath.name}'...")
+
+            analyzer = WordAnalyzer(filepath)
+
+            if analyzer.process_file():
+                analyzer.print_report()
+
+        else:
+            print("\nInvalid choice. Please select from 1-5.")
+
+        input("\nPress Enter to return to the menu...")
+
+
+if __name__ == "__main__":
+    main()
